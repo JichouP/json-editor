@@ -6,7 +6,6 @@
     "price": {
       "type": "integer",
       "description": "カードの価格をここに入力してください",
-      "default": 10,
       "minimum": 1,
       "maximum": 60
     },
@@ -15,12 +14,13 @@
       "properties": {
         "type": {
           "type": "string",
+          "description": "発電に使う資源（１つ目）を指定してください",
           "enum": ["coal", "oil", "garbage", "nuclear"],
           "default": "coal"
         },
         "cost": {
           "type": "integer",
-          "default": 1,
+          "description": "一度の発電に使う資源の個数を指定してください",
           "minimum": 1,
           "maximum": 3
         }
@@ -31,16 +31,23 @@
       "properties": {
         "type": {
           "type": "string",
+          "description": "発電に使う資源（２つ目）を指定してください",
           "enum": ["none", "coal", "oil", "garbage", "nuclear"],
           "default": "coal"
         },
         "cost": {
           "type": "integer",
-          "default": 1,
+          "description": "一度の発電に使う資源の個数を指定してください",
           "minimum": 1,
           "maximum": 3
         }
       }
+    },
+    "generate": {
+      "type": "integer",
+      "description": "一度に発電する世帯数を入力してください",
+      "minimum": 1,
+      "maximum": 15
     }
   }
 }

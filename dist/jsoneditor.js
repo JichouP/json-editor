@@ -2655,13 +2655,13 @@ JSONEditor.defaults.editors.object = JSONEditor.AbstractEditor.extend({
       this.editjson_textarea.style.height = '170px';
       this.editjson_textarea.style.width = '300px';
       this.editjson_textarea.style.display = 'block';
-      this.editjson_save = this.getButton('Save','save','Save');
+      this.editjson_save = this.getButton('保存','save','Save');
       this.editjson_save.addEventListener('click',function(e) {
         e.preventDefault();
         e.stopPropagation();
         self.saveJSON();
       });
-      this.editjson_cancel = this.getButton('Cancel','cancel','Cancel');
+      this.editjson_cancel = this.getButton('キャンセル','cancel','Cancel');
       this.editjson_cancel.addEventListener('click',function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -2681,7 +2681,7 @@ JSONEditor.defaults.editors.object = JSONEditor.AbstractEditor.extend({
       this.addproperty_list.style.overflowX = 'hidden';
       this.addproperty_list.style.paddingLeft = '5px';
       this.addproperty_list.setAttribute('class', 'property-selector');
-      this.addproperty_add = this.getButton('add','add','add');
+      this.addproperty_add = this.getButton('追加','add','add');
       this.addproperty_input = this.theme.getFormInputField('text');
       this.addproperty_input.setAttribute('placeholder','Property name...');
       this.addproperty_input.style.width = '220px';
@@ -2779,7 +2779,7 @@ JSONEditor.defaults.editors.object = JSONEditor.AbstractEditor.extend({
       }
 
       // Edit JSON Button
-      this.editjson_button = this.getButton('JSON','edit','Edit JSON');
+      this.editjson_button = this.getButton('JSONをインポート･編集','edit','Edit JSON');
       this.editjson_button.addEventListener('click',function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -3734,7 +3734,7 @@ JSONEditor.defaults.editors.array = JSONEditor.AbstractEditor.extend({
     }
     
     if(i && !self.hide_move_buttons) {
-      self.rows[i].moveup_button = this.getButton('','moveup',this.translate('button_move_up_title'));
+      self.rows[i].moveup_button = this.getButton('上に移動','moveup',this.translate('button_move_up_title'));
       self.rows[i].moveup_button.className += ' moveup';
       self.rows[i].moveup_button.setAttribute('data-i',i);
       self.rows[i].moveup_button.addEventListener('click',function(e) {
@@ -3761,7 +3761,7 @@ JSONEditor.defaults.editors.array = JSONEditor.AbstractEditor.extend({
     }
     
     if(!self.hide_move_buttons) {
-      self.rows[i].movedown_button = this.getButton('','movedown',this.translate('button_move_down_title'));
+      self.rows[i].movedown_button = this.getButton('下に移動','movedown',this.translate('button_move_down_title'));
       self.rows[i].movedown_button.className += ' movedown';
       self.rows[i].movedown_button.setAttribute('data-i',i);
       self.rows[i].movedown_button.addEventListener('click',function(e) {
@@ -4260,7 +4260,7 @@ JSONEditor.defaults.editors.table = JSONEditor.defaults.editors.array.extend({
 
     // Buttons to delete row, move row up, and move row down
     if(!this.hide_delete_buttons) {
-      self.rows[i].delete_button = this.getButton('','delete',this.translate('button_delete_row_title_short'));
+      self.rows[i].delete_button = this.getButton('削除','delete',this.translate('button_delete_row_title_short'));
       self.rows[i].delete_button.className += ' delete';
       self.rows[i].delete_button.setAttribute('data-i',i);
       self.rows[i].delete_button.addEventListener('click',function(e) {
@@ -4283,7 +4283,7 @@ JSONEditor.defaults.editors.table = JSONEditor.defaults.editors.array.extend({
 
 
     if(i && !this.hide_move_buttons) {
-      self.rows[i].moveup_button = this.getButton('','moveup',this.translate('button_move_up_title'));
+      self.rows[i].moveup_button = this.getButton('上に移動','moveup',this.translate('button_move_up_title'));
       self.rows[i].moveup_button.className += ' moveup';
       self.rows[i].moveup_button.setAttribute('data-i',i);
       self.rows[i].moveup_button.addEventListener('click',function(e) {
@@ -4304,7 +4304,7 @@ JSONEditor.defaults.editors.table = JSONEditor.defaults.editors.array.extend({
     }
 
     if(!this.hide_move_buttons) {
-      self.rows[i].movedown_button = this.getButton('','movedown',this.translate('button_move_down_title'));
+      self.rows[i].movedown_button = this.getButton('下に移動','movedown',this.translate('button_move_down_title'));
       self.rows[i].movedown_button.className += ' movedown';
       self.rows[i].movedown_button.setAttribute('data-i',i);
       self.rows[i].movedown_button.addEventListener('click',function(e) {
@@ -7822,43 +7822,43 @@ JSONEditor.defaults.languages.en = {
   /**
    * Text on Delete All buttons
    */
-  button_delete_all: "All",
+  button_delete_all: "すべてのカードを削除",
   /**
    * Title on Delete All buttons
    */
-  button_delete_all_title: "Delete All",
+  button_delete_all_title: "すべてのカードを削除",
   /**
     * Text on Delete Last buttons
     * @variable This key takes one variable: The title of object to delete
     */
-  button_delete_last: "Last {{0}}",
+  button_delete_last: "最後の{{0}}を削除",
   /**
     * Title on Delete Last buttons
     * @variable This key takes one variable: The title of object to delete
     */
-  button_delete_last_title: "Delete Last {{0}}",
+  button_delete_last_title: "最後の{{0}}を削除",
   /**
     * Title on Add Row buttons
     * @variable This key takes one variable: The title of object to add
     */
-  button_add_row_title: "Add {{0}}",
+  button_add_row_title: "{{0}}を追加",
   /**
     * Title on Move Down buttons
     */
-  button_move_down_title: "Move down",
+  button_move_down_title: "下に移動",
   /**
     * Title on Move Up buttons
     */
-  button_move_up_title: "Move up",
+  button_move_up_title: "上に移動",
   /**
     * Title on Delete Row buttons
     * @variable This key takes one variable: The title of object to delete
     */
-  button_delete_row_title: "Delete {{0}}",
+  button_delete_row_title: "{{0}}を削除",
   /**
     * Title on Delete Row buttons, short version (no parameter with the object title)
     */
-  button_delete_row_title_short: "Delete",
+  button_delete_row_title_short: "{{0}}を削除",
   /**
     * Title on Collapse buttons
     */
